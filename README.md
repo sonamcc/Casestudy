@@ -1,6 +1,9 @@
 # Casestudy
 AdvDevopsCaseStudy
-ase Study Overview
+
+
+
+case Study Overview
 The case study involves integrating static analysis tools with Infrastructure-as-Code (IaC) using Terraform. This project focuses on setting up a development environment that combines Jenkins for continuous integration and deployment, SonarQube for static code analysis, and Terraform for infrastructure provisioning. The goal is to create a robust pipeline that can automatically analyze Python applications for quality and security issues.
 
 Key Features and Applications:
@@ -152,7 +155,7 @@ Reference video: https://www.youtube.com/watch?v=E5hMOGeBT-o&t=38s
 
 Step 1: Click on the SonarQubeServer and click on connect.
 
-Step 2: Open Git Bash and go to the directory which has the Key downloaded. If you don’t have the key downloaded, create a key pair and download the .pem file for the key. Since, I have the key downloaded in Downloads directory, I used the following commands: cd Download dir AMsonarqube.pem* ssh -i "AMjsonarqube.pem" ec2-user@ec2-98-80-223-40.compute-1.amazonaws.com
+Step 2: Open Git Bash and go to the directory which has the Key downloaded. If you don’t have the key downloaded, create a key pair and download the .pem file for the key. Since, I have the key downloaded in Downloads directory, I used the following commands: cd Download dir SCsonarqube.pem* ssh -i "SCsonarqube.pem" ec2-user@ec2-98-80-223-40.compute-1.amazonaws.com
 
 Step 3: Now, in order to install java run the following commands:
 
@@ -193,7 +196,7 @@ Step 6: Now, go to EC2 dashboard and select SonarQubeServer and copy its public 
 
 Step 7: You will be redirected to this page on successful installation of SonarQube and visiting the public address url with port 9000. Login the username=admin and password=admin.
 
-Step 8: Now, set up the initial configurations by setting up new password. password=Anuprita@4321
+Step 8: Now, set up the initial configurations by setting up new password. password=Sonamsonam@2004
 
 Step 9: Now, click on the Create a local project link and name the project Hello-World and choose use the global setting
 
@@ -222,7 +225,7 @@ pipeline {
   stages {
     stage('Clone Repository') {
       steps {
-        git branch: 'main', url: 'https://github.com/Anuprita2022-26/helloworld_python.git'
+        git branch: 'main', url: 'Add your url'
       }
     }
     stage('SonarQube Analysis') {
